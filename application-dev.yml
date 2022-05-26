@@ -50,8 +50,8 @@ logging:
       clean-history-on-start: false
       max-file-size: 5MB
 eform:
-  pdf-store: "/home/carmel/Desktop/eForms/"
-  pdf-templates: "/home/carmel/Desktop/eForms/pdf-templates/"
+  pdf-store: "s3://assetmine-eforms"
+  pdf-templates: "s3://assetmine-eforms/pdf-templates/"
 carmel:
   temp-files-upload-path: "/mnt/volume/apps/docker/uploads/"
  # temp-files-upload-path: "/home/carmel/Documents/uploads/temp_files/"
