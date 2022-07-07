@@ -83,19 +83,28 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/api/olive/1.0/inventory/(?<segment>/?.*), /$\{segment}
-            
+        
+        - id: wealth-holding
+          uri: lb://wealthHolding-server
+          predicates:
+            - Path=/api/olive/1.0/wealthHolding/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/api/olive/1.0/wealthHolding/(?<segment>/?.*), /$\{segment}
+
 #  security:
 #    oauth2:
 #      resourceserver:
 #        jwt:
 #          jwk-set-uri: "http://localhost:7071/.well-known/jwks.json"
           
-#eureka:
-#  client:
-#    region: default
-#    registry-fetch-interval-seconds: 5
-#    service-url:
-#      defaultZone: http://localhost:7074/eureka/
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
       
 #logging:
 #  level:
