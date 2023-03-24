@@ -54,4 +54,5 @@ eform:
   pdf-templates: "/home/ubuntu/tmp/v1/eforms/pdf-templates/"
 carmel:
   temp-files-upload-path: "/home/ubuntu/tmp/v1/reports-template/"
+  docs-path: "/uploads/"
   reports-template-path: "/home/ubuntu/tmp/v1/reports-template/"
